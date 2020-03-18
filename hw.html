@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display an alert box.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+
+//ex1.1
+//let x = 1;
+//let y = 2;
+//let res1=String(x)+String(y);
+//document.write(res1);
+//document.write(typeof res1);
+//ex1.2
+//let res2=true+String(y);
+//document.write(res2);
+//document.write(typeof res2);
+//ex1.3
+//let res3= Boolean(x<y);
+//document.write(res3);
+//document.write(typeof res3);
+//ex1.4
+//let res4=x+y;
+//document.write(res4);
+//document.write(typeof res4);
+
+
+
+//ex 2
+//let number = prompt("enter number:");
+//if(number%7==0){document.write(number+" is pisitive and %7 ")}
+//if (number>0 && number%2==0){document.write(number+" is pisitive and % 2 " ) }
+//if (number<0){document.write("number is negative")}
+//if(number%2!=0){document.write("number !% 2")}
+//if(number%7!=0){document.write("number !%7")}
+
+
+//ex 3
+//let arr=[3,"asdfg",true,null];
+//document.write(arr.length);
+//alert("enter 5 element of arr");
+//arr[5]=prompt();
+//document.write(arr);
+//arr.shift();
+//document.write(arr);
+
+//ex4
+//let cities=["Lviv","Kiev","London","New York"];
+//document.write(cities[0]+"*"+cities[1]+"*"+cities[2]+"*"+cities[3]);
+
+//ex5
+//let isAdult=prompt("are you 18?");
+//if(isAdult>=18){document.write("you are an adult!")}
+//else{document.write("you are too young!")}
+
+//ex6
+//let tmp=prompt("enter size a");
+//if(tmp>0){a=tmp}
+//else{document.write("negative number")}
+
+//let tmo=prompt("enter size b");
+//if(tmo>0){b=tmo}
+//else{document.write("negative number")}
+
+//let tml=prompt("enter size c");
+//if(tml>0){c=tml}
+//else{document.write("negative number")}
+
+//document.write(" A: "+a);
+//document.write(" B: "+b);
+//document.write(" C: "+c);
+
+//let p=((Number(a)+Number(b)+Number(c))/2);
+//document.write(" P: "+ p);
+
+//let s=Math.sqrt(Number(p)*(Number(p)-Number(a))*((Number(p)-Number(b))*((Number(p)-Number(c)))));
+//document.write("S= "+s);
+
+//ex 7
+let hour = new Date();
+let a=hour.getHours();
+alert (a);
+if(a>23&& a<=5){alert("good night!")}
+if(a>5&& a<=11){alert("good morning!")}
+if(a>11&& a <=17){alert("good day!")}
+if(a>17&& a<=23){alert("good evening!")}
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
