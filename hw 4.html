@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<<meta charset="UTF-8">
+<title> Including JavaScript</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+/////ex 1 кількість властивостей в обєкті
+let car ={
+  producent: "audi",
+  model: "a3",
+  year: 2017,
+  color: "black",
+  engine: "2.0 tfsi",
+  horsePower: 252
+  propsCount :function(currentObject)
+  {
+    var currentObject=0;
+      for(var a in car)
+      {
+       currentObject++;
+       return currentObject;
+      }
+   }
+ }
+///////////////////////////////////////////////////////
+/////ex 2
+let car =
+{
+  producent: "audi",
+  model: "a3",
+  year: 2017,
+  color: "black",
+  engine: "2.0 tfsi",
+  horsePower: 252
+}
+console.log(Object.getOwnPropertyNames(car));
+console.log(car.producent+'\n'+car.model+'\n'+car.year+'\n'+car.color+'\n'+car.engine+'\n'+car.horsePower);
+
+
+var myObject = {"width": "300px", "height": "300px", "font-size": "5rem", "img": "hello.png", "position": "absolute"};
+
+var showProps = function(obj){
+   var keys = [];
+   var values = [];
+   for(var key in obj){
+      keys.push(key);
+      values.push(obj[key]);
+
+   }
+
+   return [keys, values];
+}
+
+
+alert("Properties: " + showProps(myObject)[0] + "\nValues: " + showProps(myObject)[1]);
+
+
+///////////////////////////////////////////////////////
+/////ex 3
+class Worker
+{
+  constructor(fullName,dayrate,workingdays,experience)
+  {
+  this.fullName=fullName;
+  this.dayrate=dayrate;
+  this.workingdays=workingdays;
+
+  }
+
+
+   showsalary()
+  {
+    return this.dayrate*this.workingdays;
+
+  }
+  showSalaryWithExperience()
+  {
+    return (this.dayrate*this.workingdays)*this.#experience;
+
+  }
+  #experience = 1.2;
+  get showExp()
+   {
+  return this.#experience;
+   }
+      set setExp(experience)
+    {
+      this.#experience = experience;
+    }
+
+
+}
+  let worker1 = new Worker("John Johnson", 20, 23);
+  console.log( worker1.fullName);
+  console.log(worker1.showsalary());
+  console.log(worker1.showSalaryWithExperience());
+  worker1.setExp=1.5;
+  console.log(worker1.showSalaryWithExperience());
+
+  ///////////////////////////////////////////////////////
+  /////ex 4
+  class Person
+    {
+      constructor(name,surname)
+      {
+        this.name=name;
+        this.surname=surname;
+      }
+      showFullName()
+      {
+        return this.name+" "+this.surname;
+      }
+    }
+    class Student extends Person
+    {
+      constructor(name,surname,year)
+      {
+        super(name,surname);
+        this.year=year;
+
+      }
+      MidleName(midleName)
+      {
+        this.midleName=midleName;
+        return this.name+" "+this.surname+" "+this.midleName;
+      }
+      showCourse()
+      {
+       if (2020-this.year > 6)
+       {
+        return (2020-this.year) % 6;
+       }
+       else
+       {
+        return 2020-this.year;
+       }
+      }
+  }
+
+    var stud1 = new Student("Petro", "Petrenko", 2015);
+    console.log(stud1.MidleName("Petrovych"));
+    console.log("Current course: " + stud1.showCourse());
+
+    ///////////////////////////////////////////////////////
+    /////ex 5
+
+
+    class GeometricFigure
+    {
+        getArea()
+      {
+        return 0;
+      }
+      toString()
+      {
+        return Object.getPrototypeOf(this).constructor.name;
+      }
+    }
+    class Triangle extends GeometricFigure
+    {
+      constructor(a,b)
+      {
+        this.a=a;
+        this.b=b;
+      }
+      getArea()
+      {
+        return (a/2)*b;
+      }
+
+    }
+    class Square extends GeometricFigure
+    {
+      constructor(a)
+      {
+        this.a=a;
+      }
+     getArea()
+      {
+        return a*a;
+      }
+
+    }
+    class Circle extends GeometricFigure
+    {
+      constructor(r)
+      {
+        this.r=r;
+      }
+       getArea()
+      {
+        return (r*r)*3,14;
+      }
+    }
+
+
+
+
+
+</script>
+</body>
+</html>
