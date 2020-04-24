@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<meta charset="UTF-8">
+<title> Including JavaScript</title>
+</head>
+<body>
+  <script>
+// ex 1   сума всіх чисел масива
+
+//var arr = [1,2,3,4];
+//function arraySum(array)
+//{
+//var sum = 0;
+//for(var i = 0; i < array.length; i++)
+//{
+  //  sum += array[i];
+//}
+//console.log(sum);
+//}
+//arraySum(arr);
+//////////////////////////
+
+// ex 2    масив 15 чисел якшо число парне виводити повід якшо не парне інше повід
+
+//for (var i = 0; i <= 15; i++)
+//{
+  //if(i===0)
+  //console.log(i+" is oven")
+  //else if(i%2===0)
+  //console.log(i+" is even");
+  //else if(i%2!==0)
+    //console.log(i+" is odd");
+//}
+
+//ex 3   заповення масива рандомними числами
+
+//var randArray = [];
+
+//for ( i = 0; i < 5; i++ )
+//{
+  //  randArray.push( Math.round( Math.random() * 500 ));
+//}
+//console.log( a );
+
+//ex 4  вивести число а в степені b
+
+//console.log("enter numbe a");
+//var a=prompt(a);
+//console.log("enter numbe b");
+//var b=prompt(b);
+//var raiseToDegree=Math.pow(a,b);
+//console.log(raiseToDegree);
+
+//ex5   показати мінімальний елемент масива
+
+//var minNum = [5, -1, 40, 355, 17, 3];
+
+//for (var i = 0; i < minNum.length; i++)
+//{
+  //  if(minNum[i] < minNum[0])
+    //{
+      //  minNum[0] = minNum[i];
+    //}
+
+//}
+//console.log(minNum[0]);
+
+
+
+//ex 6 яка приймає масив arr і перевіряє на унікальність його елементи. Якщо всі елементи масиву унікальні (не мають дублів), то функція поверне true, інакше - false.
+//  var A=[1,2,3,4,5];
+  //  var n = A.length;
+  //  for (var i = 0; i < n-1; i++)
+  //   {
+    //    for (var j = i+1; j < n; j++)
+    //    {
+      //     if (A[ i ] === A[j])
+      //     {
+        //     console.log("false");
+      //     break;
+        //    }
+        //  else if(A[ i ] !== A[j])
+        //   {
+        //  console.log("true");
+      //    break;
+      //     }
+      //  }
+    // }
+
+
+
+ ///ex 8 приймає стрінг і вертає його але кожна перща буква у великому регістрі
+     var str = "i love java script";
+
+     function capitalize(str) {
+
+      return str.replace(/(^|\s)\S/g, function(a) {return a.toUpperCase()})
+
+     }
+
+     document.write(capitalize(str));
+
+
+
+  </script>
+
+</body>
+</html>
