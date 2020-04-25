@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"content="width=device-width,initial-scale=1.0">
+  <title> Including JavaScript</title>
+</head>
+
+<body>
+
+<!--*************************ex1********************-->
+
+<!-- <div id="test">First</div> -->
+
+<!--*************************ex2********************-->
+
+<!--  <img class="image" src="dog.jpg"> -->
+
+<!--*************************ex3********************-->
+
+
+<!-- <h2>Article header</h2>
+      <div id="text">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+        <p>Third paragraph</p>
+      </div>
+ <p>Another text</p> -->
+
+<!--*************************ex4********************-->
+
+<!-- <ul id="list">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+</ul> -->
+
+<!--*************************ex5********************-->
+
+
+
+  <!-- <h1>I'am a big header!!!</h1>
+        <div id="myDiv">
+            <p>First paragraph</p>
+            <p>Second paragraph</p>
+            <p>Third paragraph</p>
+            <p>Fourth paragraph</p>
+        </div>
+        <ul id="myList">
+            <li>Make</li>
+            <li>me</li>
+            <li>vertical!</li>
+        </ul>
+        <span>Make me invisible, please!</span> -->
+
+<!--*************************ex6********************-->
+
+
+    <input type="text" id="input1" value="Text1">
+    <input type="text" id="input2" value="Text2">
+
+
+
+
+</body>
+
+<script>
+/////////////////////////////////////ex 1////////////////////////////
+
+//var myDiv = document.getElementById("test");
+//myDiv.innerHTML = "Last";
+
+/////////////////////////////////////ex 2////////////////////////////
+//document.getElementsByClassName("image").src = "cat.jpg";
+//alert(document.getElementsByClassName('image').src);
+
+/////////////////////////////////////ex 3////////////////////////////
+
+//var x = document.getElementById("text").querySelectorAll('p');
+//for (i = 0; i < x.length; i++) {
+  //document.write("Selector text " + i + ": " +  x[i].textContent + "<br>");
+//}
+
+/////////////////////////////////////ex 4////////////////////////////
+
+<!-- var x = document.getElementById("list").querySelectorAll('li');
+var y = (x.length-x.length%2)/2;
+for (i = 0; i < y; i++) {
+ document.write(x[i].textContent);
+  document.write(x[4-i].textContent);
+}
+if (x.length%2 == 1) {
+   document.write(x[y].textContent);
+} -->
+
+/////////////////////////////////////ex 5////////////////////////////
+
+
+<!-- var a = document.getElementsByTagName('h1')
+a[0].style.backgroundColor = "green";
+
+var b = document.getElementById("myDiv").querySelectorAll("p");
+b[0].style.fontWeight = "900";
+b[1].style.color = "red";
+b[2].style.textDecoration = "underline";
+b[3].style.fontStyle = "italic";
+
+var b = document.getElementById("myList").querySelectorAll("li");
+for (i = 0; i < b.length; i++) {
+ b[i].style.display = "inline";
+}
+
+style.display = "none";
+
+
+var z = document.getElementsByTagName('span')
+z[0].style.color = "white"; -->
+
+/////////////////////////////////////ex 6////////////////////////////
+
+    let inputFirst = prompt('Please enter Text1');
+    let inputSecond = prompt('Please enter Text2');
+    let myInput1 = document.getElementById("input1");
+    let myInput2 = document.getElementById("input2");
+    myInput1.value = inputFirst;
+    myInput2.value = inputSecond;
+
+    let newInput = myInput2.cloneNode(true);
+    myInput2.remove();
+    newInput.value = myInput1.value;
+    myInput1.value  = myInput2.value
+    document.body.append(newInput);
+
+
+/////////////////////////////////////ex 7////////////////////////////
+
+</script>
+
+
+
+
+
+  </html>
