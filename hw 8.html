@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"content="width=device-width,initial-scale=1.0">
+  <title> Including JavaScript</title>
+</head>
+
+<body>
+<script>
+  /////////////////////////ex1///////////////////
+
+  function upperCase(str)
+   {
+    var result = /^[A-Z]/;
+    let check = result.test(str);
+    if (check)
+    {
+      console.log("–€док починаЇтьс€ з великих л≥тер ")
+    }
+    else
+     {
+      console.log("–€док не починаЇтьс€ з великих л≥тер ")
+    }
+  }
+  upperCase('regexp');
+  upperCase('RegExp');
+
+  /////////////////////////ex2///////////////////
+function checkEmail(str)
+{
+  var result=/^\S+(@gmail\.com)$/;
+  return result.test(str);
+}
+/////////////////////////ex3///////////////////
+let str="cdbBdbsbz";
+var result=/d(b+)(d)/i;
+console.log(str.match(result));
+let str2="cdbBbbbBbbBdbsbz";
+console.log(str2.match(result));
+
+/////////////////////////ex4///////////////////
+
+let str = "Java Script";
+var result = /\S+/gi;
+let myArray = str.match(result);
+console.log(myArray[1] + ", " + myArray[0]);
+
+/////////////////////////ex5///////////////////
+function cardValidator(str)
+{
+  var result=/^((\d{4}-){3})(\d{4})$/;
+  return result.test(str);
+}
+cardValidator("9999-9999-9999-9999");
+
+/////////////////////////ex6///////////////////
+function checkEmail(str)
+{
+  var result=/^[A-Za-z0-9]+(\w+)?(\-)?\w+(@ukr\.net)$/;
+  let check=result.test(str);
+  if(check)
+  {
+    console.log("email в≥рний");
+  }
+  else
+  {
+    console.log("email не в≥рний");
+  }
+}
+console.log(checkEmail('my_mail@ukr.net'));
+
+/////////////////////////ex7///////////////////
+function checkLogin(str) {
+  var result = /^\D([A-Za-z0-9]+(((\d+\.\d)+?[A-Za-z0-9]+?(\d+\.\d)?)+?)?)$/;
+  let numb = str.match(/\d+(\.\d+)?/g);
+
+  if (str.length >= 2 && str.length <= 10) {
+  console.log(result.test(str));
+  console.log(numb);
+
+  }
+  else
+   {
+    console.log(false);
+    console.log(numb);
+  }
+
+}
+console.log(checkLogin('ee1.1ret3'));
+</script>
+</body>
+
+</html>
