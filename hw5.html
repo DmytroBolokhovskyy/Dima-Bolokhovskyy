@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<<meta charset="UTF-8">
+<title> Including JavaScript</title>
+</head>
+<body>
+<script type="text/javascript">
+
+
+
+/////////////////////////////ex 1
+function testThrow(exception)
+{
+  try
+  {
+    throw exception;
+  }
+  catch (error)
+  {
+    document.write("<br>"+"Caught:" + " " + error+"<br>");
+  }
+}
+testThrow(10);
+testThrow('Testing');
+testThrow(new Error(' error! '));
+
+
+
+
+/////////////////////////////ex 2
+function calcRectangleArea(width, height)
+ {
+  try
+  {
+    if (width < 0 || height < 0)
+    {
+        throw new Error("ѕараметри менше нул€");
+    }
+     else if (isNaN(width) || isNaN(height))
+     {
+
+        throw new Error("у параметрах повинн≥ бути т≥льки числа");
+      }
+
+    return width * height;
+  }
+  catch (error)
+  {
+      console.log(error.message);
+  }
+      }
+
+calcRectangleArea(-5, 5);
+calcRectangleArea(5, "ddd6");
+calcRectangleArea(5, 5);
+
+
+
+/////////////////////////////ex 3
+
+function checkAge()
+{
+  let age = prompt("введ≥ть св≥й в≥к", "");
+  if (!age.trim())
+  {
+    throw new Error("ви не ввели св≥й в≥к,спробуйте ще раз");
+  }
+  else if (isNaN(age))
+  {
+    throw new Error("ви ввели нечислове значенн€");
+  }
+  else if (age <= 14 && age > 0)
+  {
+    throw new Error("перегл€д ф≥льму недоступний у дан≥й в≥ков≥й категор≥њ");
+  }
+
+}
+try
+  {
+      let result = checkAge();
+      console.log(typeof age);
+        console.log("ви можете приступати до перегл€ду ф≥льму");
+  }
+  catch (exception)
+   {
+        console.log(exception.name);
+        console.log(exception.message);
+  }
+
+
+
+ /////////////////////////////ex 4
+ class MonthException
+ {
+  name = "MonthException"
+  constructor(message)
+  {
+      this.message = message;
+  }
+}
+
+function showMonthName(month)
+{
+
+ try
+ {
+  let arr = ["с≥чень", "лютий", "березень", "кв≥тень", "травень", "червень", "липень", "серпень", "вересень", "жовтень", "листопад", "грудень"];
+
+  if(month > 0 && month <= 12)
+   {
+    return arr[month-1];
+  }
+  else
+  {
+    throw new Error("неправельний номер м≥с€ц€")
+  }
+  }
+  catch (exception)
+   {
+    let err = new MonthException();
+    console.log(err.name + " " + exception.message);
+  }
+}
+
+console.log(showMonthName(5))
+console.log(showMonthName(14))
+
+
+
+
+ /////////////////////////////ex 5
+
+function showUser(id)
+{
+  try
+  {
+ let obj = {};
+ if (id >= 0)
+  {
+   obj = {id};
+   return obj;
+ }
+ else
+ {
+   throw new Error("ID неможе бути в≥дЇмним:");
+ }
+ }
+  catch (exception)
+  {
+    console.log(exception.name  + ":" + " " + exception.message + " " + id);
+ }
+}
+
+function showUsers(ids)
+{
+ let arr = [];
+ let i2 = 0;
+ let negative;
+
+   ids.forEach(function(id, i, ids)
+    {
+
+    if (ids[i] >= 0)
+     {
+     arr[i2] = {id};
+     i2++;
+   }
+   else
+   {
+     negative = showUser(ids[i])
+   }
+ });
+return arr;
+}
+
+showUsers([7, -12, 44, 22])
+
+
+
+
+
+
+  </script>
+  </body>
+  </html>
